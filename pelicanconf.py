@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Lopez Brothers'
 SITENAME = u'DevLo'
-# SITEURL = 'http://mydomain.com'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'https://sergoh.github.io'
+# SITEURL = 'http://localhost:8000'
 THEME = "./Flex"
 
 PATH = 'content'
