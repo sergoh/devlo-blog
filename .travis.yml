@@ -1,0 +1,22 @@
+branches:
+  only:
+  - master
+language: python
+python:
+- 2.7
+install:
+- pip install -r requirements.txt
+script:
+- make html
+notifications:
+  email:
+    on_success: always
+    on_failure: always
+env:
+  global:
+  - secure: W9jdJcVLMok2QnSWn94bkBZL6yiP88paWBSQvj5pNwx6rMA/KAuAmEDTmxWCRpvte9CP1mTpPgNRwn7UhhmZsw4f1AKEAClxNbpbVUhiISW+LoVmlkhw//fp+qGplhun2ID9sJpfjsgun5Ue4+dcpvI2rHP17lC5ZgJBj3fx85M=
+  - secure: EuleRVAaoed/C7mn6swpagRyfCf/ffhvavamXpqAx2KnbnAY1HX9sRFO8E2zCnjLLLz6ShgoWSNA4cloFnCbX41XbOnPXuUJkyBrV61X4twvVOcoDw/w2KVZfyhJ9umU5Ci4rr8kkGgIw8RPu8hFXP/0vVCk/I43t2K0KDshXrs=
+  - secure: AMHG/pH9seZMJs1BLXAwyQzJmvkiJ4wVwlxFy1fuJSGrg7UzmKTyJvPubHfU/xxbhP+RuEb3Thi64lFJWa7Z2O/CBPzDGjZVWVgjtH2zbN+3L/YurtaWl08g3Ofo+5Mvv63uVeAC96+xsLTpj3YjK3j2xFwciDoedcUtbTqTtUYBANRPKH7i+6lpBpuJ2SUoyXmi8l+aX3xms/vlaZvC7igO5a9zHz7g58274KCkvpVe1ULX7yW1oNjOYL2PYVhiiuqCqo4koyVwo36h7jPiT5MGo0mRqnjSGy4OP3LRsTVrtGt9bwO5YTkPVPk6EuNuaXKg6R6nw7rLGR/BBNhsVUkbFZ3ml8kEZ/gadHtCAgzSNQ2cpEvU8pFrPmfOzknweoKsMc4iVrwdQ6SQox2+3NP9kicXZAC5oJld/bucqGTTOcpFaD7q2/ofrXzlYhiGBQeEgmDg+NRfZhT5DzcoQ7gCeagG2h5kPLjrAoQyO10nCxbt5VQK7XTo6Q2hcZujFErP+AQJXxuSXuKSLsQkRTuNCnoByDY3uxesAF3J12R4vH97YZfRGwj0D9lmcHpPeSQqe92qnLeDebXh8C5jEheuqwYhEIWcD7iAZtobKxDHxMT5SAjDt68R4m0Si/Gzv0RYTTYA+v0JMqB633jfnExHAo4hgZ/ZicB0o3taftQ=
+before_install:
+- git submodule update --init --recursive
+after_success: bash deploy.sh
