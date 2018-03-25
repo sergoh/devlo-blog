@@ -1,2 +1,3 @@
 [submodule "Flex"]
+    path = Flex
 	url = https://github.com/sergoh/Flex.git
