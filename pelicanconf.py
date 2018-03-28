@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Lopez Brothers'
 SITENAME = u'DevLo'
-SITEURL = 'https://sergoh.github.io'
-# SITEURL = 'http://localhost:8000'
+# SITEURL = 'https://devlo.io'
+SITEURL = 'http://localhost:8000'
 THEME = "./Flex"
 
 PATH = 'content'
@@ -22,14 +22,17 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (('About', 'http://getpelican.com/'),
+         ('Contact', 'http://python.org/'))
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+MIGUEL_SOCIAL = (('linkedin', 'https://www.linkedin.com/in/lopezm1/'),
+          ('github', 'https://github.com/lopezm1'),
+          ('twitter', 'https://twitter.com/BrogrammerMiggy'))
+
+SERGIO_SOCIAL = (('linkedin', 'https://www.linkedin.com/in/sergiolopezjr/'),
+          ('github', 'https://github.com/sergoh'),
+          ('twitter', 'https://twitter.com/mrsergoh'))
 
 DEFAULT_PAGINATION = 10
 
