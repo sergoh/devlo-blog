@@ -53,4 +53,7 @@ fabric.properties
 
 /output/
 .DS_Store
+__pycache__
+pelican.pid
+srv.pid
 
