@@ -71,6 +71,7 @@ preserve_hostname: true
 # Don't let cloud-init update the hosts file since we have edited it manually
 manage_etc_hosts: false
 ```
+_You'll notice some curls to http://169.254.169.254, this is an internal API used by EC2 instances to fetch metadata about your instance_ 
 
 *Replace $SALT_MASTER_IP with the IP of your salt-master. Don't forget to tag your EC2 instance with a "Name" tag. Naming is important when it comes to defining salt environments.*
 
@@ -134,5 +135,7 @@ sudo curl -o /tmp/bootstrap-salt.sh -L https://bootstrap.saltstack.com;
 sudo sh /tmp/bootstrap-salt.sh -i $BOX_NAME-$INSTANCE_ID -A $SALT_MASTER_IP;
 sudo rm -f /tmp/bootstrap-salt.sh;
 ```
+
+_You'll notice some curls to http://169.254.169.254, this is an internal API used by EC2 instances to fetch metadata about your instance_ 
 
 Replace $SALT_MASTER_IP with your own variables.
