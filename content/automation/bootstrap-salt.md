@@ -10,11 +10,13 @@ Summary: Use scripts to automatically register new EC2 minions with Salt-Master
 Automate Salt-Minion Registrations on EC2
 ##############
 
+## Intro
+
 These scripts can be used to register your salt minion to Salt-Master upon successfully launching. 
 
-Whether you're launching single instances or launching instances as a part of an autoscaling group, I'd highly recommend using cloud-init scripts. They're easy to use and help you install all of your packages upon launching. 
+Whether you're launching single instances or launching instances as a part of an autoscaling group, I'd highly recommend using cloud-init scripts. They're easy to use and help you install all of your packages.
 
-My scripts also include CodeDeploy. If you haven't heard of CodeDeploy, I'd take a moment to read up on it here. [AWS CodeDeploy]: https://aws.amazon.com/codedeploy/
+My scripts also include CodeDeploy. If you haven't heard of CodeDeploy, I'd take a moment to read up on it here. [AWS CodeDeploy](https://aws.amazon.com/codedeploy/)
 
 CodeDeploy can help you with:
 
@@ -23,7 +25,7 @@ CodeDeploy can help you with:
 - stops and rollbacks
 - deployment history
 
-## cloud-init-salt-codedeploy.yml
+## Cloud Init Script
 
 Technical Stack: SaltStack, EC2(CentOS)
 
@@ -89,7 +91,7 @@ salt 'stage*' state.show_top
 This command would only apply salt states to environments tagged with _stage_ in their name. In this example, that would mean the stage-api and stage-www server. 
 
 
-## bootstrap-salt-codedeploy.sh
+## Shell Script Equivalent
 
 Technical Stack: SaltStack, EC2(CentOS)
 
