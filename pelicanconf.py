@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Lopez Brothers'
-SITENAME = u'DevLo'
-SITEURL = 'https://sergoh.github.io'
-#SITEURL = 'http://localhost:8000'
+AUTHOR = 'Lopez Brothers'
+FAVICON = '/img/favicon.ico'
+SITENAME = 'DevLo'
+SITETITLE = 'DevLo'
+SITEURL = 'http://localhost:8000'
 THEME = "./Flex"
 
 PATH = 'content'

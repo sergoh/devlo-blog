@@ -22,4 +22,5 @@ Once built, to serve
 `Make serve` or `Make devserver`
 
 ## Publish
-Push the commit to the `master` and [Travis-CI](https://travis-ci.org/sergoh/devlo-blog) will kick off a build to deploy the website
+1. Run the `Make publish` command, as it will use the `publishconf.py` config file
+2. Push the commit to the `master` and [Travis-CI](https://travis-ci.org/sergoh/devlo-blog) will kick off a build to deploy the website
