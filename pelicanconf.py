@@ -7,8 +7,13 @@ FAVICON = '/img/favicon.ico'
 SITENAME = u'DevLo'
 SITETITLE = u'DevLo'
 SITEURL = 'http://localhost:8000'
+SITESUBTITLE = 'The Lopez brother\'s tech blog'
+SITEDESCRIPTION = 'DevLo - The Lopez brother\'s tech blog.'
 THEME = "./Flex"
 HOME_HIDE_TAGS = True
+PYGMENTS_STYLE = 'monokai'
+
+ROBOTS = 'index, follow'
 
 PATH = 'content'
 
