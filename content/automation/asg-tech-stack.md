@@ -98,7 +98,7 @@ SaltStack has been crucial when it comes to influencing how my team designs code
 
 Over the next few weeks I’ll be hoping to add some more posts that dive a little bit deeper into this topic.
 
-[Automate Salt-Minion Registrations on EC2](http://www.devlo.io/bootstrap-salt.html#bootstrap-salt)
-_Introduction to Salt-Master_
-_Organizing States on Salt-Master_
-_Introduction to CodeDeploy_
+- [Automate Salt-Minion Registrations on EC2](http://www.devlo.io/bootstrap-salt.html#bootstrap-salt)
+- _Introduction to Salt-Master_
+- _Organizing States on Salt-Master_
+- _Introduction to CodeDeploy_
