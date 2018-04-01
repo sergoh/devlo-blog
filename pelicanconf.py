@@ -4,11 +4,12 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Lopez Brothers'
 FAVICON = '/img/favicon.ico'
+SITELOGO = '/images/Devlo-Logo.png'
 SITENAME = u'DevLo'
 SITETITLE = u'DevLo'
 SITEURL = 'http://localhost:8000'
-SITESUBTITLE = 'The Lopez brother\'s tech blog'
-SITEDESCRIPTION = 'DevLo - The Lopez brother\'s tech blog.'
+SITESUBTITLE = 'The Lopez brothers\' development blog'
+SITEDESCRIPTION = 'DevLo - The Lopez brothers\' development blog.'
 THEME = "./Flex"
 HOME_HIDE_TAGS = True
 PYGMENTS_STYLE = 'monokai'
@@ -46,7 +47,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-STATIC_PATHS = ['extra/CNAME']
+STATIC_PATHS = ['images', 'extra']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 # Menu
