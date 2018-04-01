@@ -4,10 +4,11 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Lopez Brothers'
 FAVICON = '/img/favicon.ico'
-SITENAME = 'DevLo'
-SITETITLE = 'DevLo'
+SITENAME = u'DevLo'
+SITETITLE = u'DevLo'
 SITEURL = 'http://localhost:8000'
 THEME = "./Flex"
+HOME_HIDE_TAGS = True
 
 PATH = 'content'
 
