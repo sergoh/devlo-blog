@@ -62,7 +62,7 @@ functions:
           method: get
 ```
 
-If you haven't deployed a function with Serverless yet, I'd recommend taking a few minutes and deploying their boilerplate function [here](https://serverless.com/framework/docs/providers/aws/guide/quick-start/).
+If you haven't deployed a function with Serverless yet, I'd recommend taking a few minutes to deploy their boilerplate function [here](https://serverless.com/framework/docs/providers/aws/guide/quick-start/).
 
 ## **Building Environments in Serverless**
 
@@ -85,7 +85,7 @@ provider:
 
 - if ```sls deploy --stage prod``` is ran, the ```provider.stage``` variable in the yml will be set to ```prod```
 - ```${self:provider.stage}``` resolves to ```prod ```
-- ```prod``` is used in ```${file(./config/${self:provider.stage}.yml)}```
+- ```prod``` is then used in ```${file(./config/${self:provider.stage}.yml)}```
 - ```${file(./config/prod.yml)}``` and loaded into the ``custom.configFile`` variable
 - ```${self:custom.configFile.vpc}``` will load the ```vpc``` variable from the ```prod.yml``` file loaded into ```custom.configFile```
 
@@ -95,6 +95,7 @@ Likewise, if you ran ```sls deploy --stage test```, the stage variablle would be
 
 I'd recommend laying out your files in the following pattern:
 
+```
 | configs 
 | - dev.yml
 | - test.yml
@@ -108,6 +109,7 @@ I'd recommend laying out your files in the following pattern:
 | - - - - example
 | - - - - - ExampleHandler
 | serverless.yml
+```
 
 A typical config file will look like this:
 
@@ -122,7 +124,7 @@ KMS_KEY: ${ssm:/NONPROD/security/default-kms-key}
 ELASTICACHE_CONFIGURATION_ENDPOINT: ${ssm:/DEV/services/memcached/connection-url}
 MEMCACHED_DEFAULT_TTL_VALUE: "604800"
 ```
-This allows you to define different regions per {stage}.yml. You have the flexibility to set different values for different variables. You could decide that the ```MEMCACHED_DEFAULT_TTL_VALUE:``` needs to be ```172800``` in PROD as opposed to the ```604800```. You could call different SSM values or even define different VPC Security Groups and Subnets. 
+This allows you to define different regions per {stage}.yml. You have the flexibility to set different values for different variables. You could decide that the ```MEMCACHED_DEFAULT_TTL_VALUE:``` needs to be ```172800``` in PROD as opposed to the ```604800``` in DEV. You could call different SSM values or even define different VPC Security Groups and Subnets. 
 
 This pattern gives you a clear-readable format for your environment config files that are loaded into the parent ```serverless.yml``` file. 
 
@@ -156,7 +158,7 @@ provider:
 
 The ```APNS_BAS_ARN```, ```GCM_BASE_ARN```, ```ELASTICACHE_CONFIGURATION_ENDPOINT```, and ```MEMCACHED_DEFAULT_TTL_VALUE``` variables are loaded from the ```custom.configFile``` file we loaded earlier with ```sls deploy --stage {env}```.
 
-_Tip: ```${opt:stage, 'dev'}``` just means to use the text passed in after the ```--stage``` cli argument. If no ```--stage``` argument is used then default to ```dev```. 
+_Tip: ```${opt:stage, 'dev'}``` just means to use the text passed in after the ```--stage``` cli argument. If no ```--stage``` argument is used then default to ```dev```._ 
 
 ### **Conclusion**
 
