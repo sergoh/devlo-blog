@@ -105,7 +105,7 @@ I'd recommend laying out your files in the following pattern:
 | src 
 | - main
 | - - java
-| - - net.app.lambda
+| - - - net.app.lambda
 | - - - - example
 | - - - - - ExampleHandler
 | serverless.yml
