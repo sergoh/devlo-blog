@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Lopez Brothers'
-FAVICON = '/img/favicon.ico'
+FAVICON = '/favicon.ico'
 SITELOGO = '/images/Devlo-Logo.png'
 SITENAME = u'DevLo'
 SITETITLE = u'DevLo'
@@ -12,7 +12,7 @@ SITESUBTITLE = 'The Lopez brothers\' development blog'
 SITEDESCRIPTION = 'DevLo - The Lopez brothers\' development blog.'
 THEME = "./Flex"
 HOME_HIDE_TAGS = True
-PYGMENTS_STYLE = 'monokai'
+PYGMENTS_STYLE = 'github'
 
 ROBOTS = 'index, follow'
 
@@ -30,7 +30,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('About', 'http://getpelican.com/'),
+LINKS = (('', ''),
          ('Contact', 'http://python.org/'))
 
 # Social widget
@@ -48,7 +48,7 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 STATIC_PATHS = ['images', 'extra']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},'extra/favicon.ico': {'path': 'favicon.ico'}}
 
 # Menu
 MAIN_MENU = True
