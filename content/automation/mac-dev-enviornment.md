@@ -23,13 +23,15 @@ Feel free to download the script from my [github gist](https://gist.github.com/l
 
 I've done my best to avoid installing any duplicates by checking if you've already installed the application in the /Applications folder of the Mac. 
 
+## **Installation**
+
 Once you download the script, head to your downloads folder on terminal and run...
 
 ```sh
 sh brew-install-mac-dev-environment.sh
 ``` 
 
-## **Packages it installs**
+## **Packages Installed**
 
 - Homebrew
 - Slack
