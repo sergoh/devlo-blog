@@ -85,7 +85,7 @@ If you wish to add another application, you'll need to use ```brew cask install`
 ```
 ## Applications we will install with `brew cask install`
 ## additional applications can be added here if you wish to install them
-declare -a applications=( Spotify Sourcetree Slack Docker iTerm "IntelliJ Idea" "Google Chrome" **"Skype"** )
+declare -a applications=( "Skype" Spotify Sourcetree Slack Docker iTerm "IntelliJ Idea" "Google Chrome" )
 ```
 Skype is capitalized because it would be saved to your /Applciations folder as Skype.app (the script will use this to make sure the application isn't already installed).
 
