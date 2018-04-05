@@ -1,16 +1,18 @@
-Title: About
+Title: About Us
 Date: 2015-07-18 08:00
 Modified: 2018-01-01 08:00
 
 ## **Welcome!**
 
-Miguel and Sergio welcome you to their little development blog. This blog is dedicated their experiences, lessons learned and anything development they've gone through through out their software development careers.  
+This blog is dedicated to our experiences in the software industry. 
 
-## **Who are the two brothers?**
+## **Who Are We?**
 
-**Miguel** - The younger of the two brothers, Miguel graduated from Arizona State University with a _B.S._ degree in _Computer Science_. His expertise lies in _Solutions Architecture_ and _AWS_.
+We're just two brothers who share a love for all aspects of software development. 
 
-**Sergio** - The old man, Sergio also Graduated from Arizona State University with a degree in _B.S.E_ degree in _Computer Systems Engineering_. His expertise lies in _Front End Technology_.
+**Miguel Lopez** is a cloud engineer, automation ethusiast and a Software Consultant @[KAR Auction Services](https://www.slideshare.net/AmazonWebServices/kar-auction-services-journey-to-the-cloud-bap201-reinvent-2017). He loves studying solution architecture and building event-driven backends using AWS and serverless technology. When he's not geeking out, he likes hiking, attending sporting events and happy hours.
+
+**Sergio Lopez** is a full stack engineer, SPA specialist and Developer @[Choice Hotels](https://www.choicehotels.com/). He loves to create maintainable SPAs using javascript frameworks like angularJS and reactJS. When he's not geeking out, he loves being an on-field mascot for the @[Arizona Diamondbacks](http://arizona.diamondbacks.mlb.com/ari/fan_forum/legends_sweeps.jsp).
 
 ## **What does DevLo mean?**
 
