@@ -17,9 +17,17 @@ Read: 5 minutes
 
 ## **Introduction**
 
-I've built a script that uses homebrew to install a common set of development tools on a Mac. Feel free to download the script from my [github gist](https://gist.github.com/lopezm1/16e641918277a4888ee7e88722b2d7dd).
+I've built a script that uses homebrew to install a common set of development tools on a Mac. 
+
+Feel free to download the script from my [github gist](https://gist.github.com/lopezm1/16e641918277a4888ee7e88722b2d7dd).
 
 I've done my best to avoid installing any duplicates by checking if you've already installed the application in the /Applications folder of the Mac. 
+
+Once you download the script, head to your downloads folder on terminal and run...
+
+```sh
+sh brew-install-mac-dev-environment.sh
+``` 
 
 ## **Packages it installs**
 
@@ -63,7 +71,7 @@ brew install git
 brew install python
 brew install node
 brew install coreutils
-*brew install <your formula here>*
+brew install <your formula here>
 .
 .
 ```
@@ -79,7 +87,7 @@ declare -a applications=( Spotify Sourcetree Slack Docker iTerm "IntelliJ Idea" 
 ```
 Skype is capitalized because it would be saved to your /Applciations folder as Skype.app (the script will use this to make sure the application isn't already installed).
 
-Next, search for the application on the [cask room search](https://caskroom.github.io/search).
+Next, search for the application ```cask-name``` on the [cask room search](https://caskroom.github.io/search).
 
 **2) Add to the switch case statement and call brew_install with the cask-name pulled from the search**
 
@@ -92,12 +100,12 @@ Next, search for the application on the [cask room search](https://caskroom.gith
       IntelliJ\ Idea) brew_install intellij-idea;;
       Sourcetree) brew_install sourcetree;;
       Spotify) brew_install spotify;;
-      **Skype) brew_install skype;;**
+      Skype) brew_install skype;;
       *) echo "Add $1 to check_before_install() to install additional applications." ;;
     esac
 ```
 
-Again, keep the switch case key captilaized because it reflects the application name under the /Application folder. Next, we will pass the _cask-name_ to the ```brew_install`` function inside the shell script. 
+Again, keep the switch case key captilaized because it reflects the application name under the /Application folder. Next, we will pass the ```cask-name``` to the ```brew_install`` function inside the shell script. 
 
 
 ## **Conclusion** 
