@@ -28,7 +28,7 @@ I've done my best to avoid installing any duplicates by checking if you've alrea
 Once you download the script, head to your downloads folder on terminal and run...
 
 ```sh
-sh brew-install-mac-dev-environment.sh
+bash brew-install-mac-dev-environment.sh
 ``` 
 
 ## **Packages Installed**
