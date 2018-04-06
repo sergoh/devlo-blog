@@ -21,6 +21,9 @@ Once built, to serve
 
 `Make serve` or `Make devserver`
 
+_Note: if it's your first time pulling down the submodule, you'll need to use this:_
+```git submodule update --init --recursive```
+
 ## Publish
 1. Run the `Make publish` command, as it will use the `publishconf.py` config file
 2. Push the commit to the `master` and [Travis-CI](https://travis-ci.org/sergoh/devlo-blog) will kick off a build to deploy the website
