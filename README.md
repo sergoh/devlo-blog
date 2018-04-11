@@ -8,11 +8,30 @@ The minimalist [Flex](https://github.com/alexandrevicenzi/Flex) theme.
 
 ## Install
 
-Install pelican and dependencies using pip:
+Install virtualenv
+
+`pip install virtualenv`
+
+Create a virtualenv
+
+`virtualenv ~/.virtualenvs/pelican`
+
+Activate the virtualenv
+
+`source ~/.virtualenvs/pelican/bin/activate`
+
+cd into `~/.virtualenvs/pelican` and install pelican + dependencies using pip:
 
 `pip install pelican Markdown typogrify`
 
+Deactive the virtualenv
+
+`deactivate`
+
 ## Build Locally
+
+_Note: if it's your first time pulling down the submodule, you'll need to use this:_
+`git submodule update --init --recursive`
 
 Once installed, to build locally
 `Make html`
@@ -20,9 +39,6 @@ Once installed, to build locally
 Once built, to serve
 
 `Make serve` or `Make devserver`
-
-_Note: if it's your first time pulling down the submodule, you'll need to use this:_
-```git submodule update --init --recursive```
 
 ## Publish
 1. Run the `Make publish` command, as it will use the `publishconf.py` config file
