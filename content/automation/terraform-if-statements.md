@@ -6,6 +6,8 @@ Slug: if-else-terraform
 Author: Miguel Lopez
 Summary: Using if-else statements in terraforms
 
+_Terraform v0.11.5_
+
 ## **Introduction**
 
 In HCL, a boolean is one of the many ways you can create an if-statement.
