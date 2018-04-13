@@ -19,7 +19,7 @@ Check out the [AWS Lambda Documentation](https://aws.amazon.com/lambda/) if you'
 
 ## **Introduction**
 
-AWS Lambda is one of the hottest services out on the market right now. First introduced in November 2014, it has completely revolutionized the way developers develop and deploy cloud-first services and applications. Here are some of the immediate functions of Lambda functions:
+AWS Lambda is one of the hottest services out on the market right now. First introduced in November 2014, it has completely revolutionized the way developers develop and deploy cloud-first services and applications. Here are some of the immediate benefits of Lambda functions:
 
 - Run code without servers
 - Automatically scales code without any configuration
