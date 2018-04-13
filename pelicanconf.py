@@ -35,8 +35,7 @@ LINKS = (('', ''),
 
 # Social widget
 MIGUEL_SOCIAL = (('linkedin', 'https://www.linkedin.com/in/lopezm1/'),
-          ('github', 'https://github.com/lopezm1'),
-          ('twitter', 'https://twitter.com/BrogrammerMiggy'))
+          ('github', 'https://github.com/lopezm1'))
 
 SERGIO_SOCIAL = (('linkedin', 'https://www.linkedin.com/in/sergiolopezjr/'),
           ('github', 'https://github.com/sergoh'),
