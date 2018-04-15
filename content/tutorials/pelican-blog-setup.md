@@ -8,7 +8,7 @@ Tags: pelican, mac, python, blog, setup, travis-ci, github pages
 ## **Intro**
 
 Setting up this blog was not a difficult task, but it did some digging around the internet to get everything up and 
-running the way my brother and I visioned our blog. I'm going to document the steps I followed from start to finish, 
+running the way my brother and I visioned our blog. I'm going to document the steps I followed from start to finish, combined from all those resources, 
 so that anyone wanting to setup something similar can do so!
 
 ## **Configure Mac High Sierra 10.13**
@@ -180,7 +180,7 @@ $ What will be the default language of this web site? [pt] en
 $ Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) n
 $ Do you want to enable article pagination? (Y/n) y
 $ How many articles per page do you want? [10] 10
-$ What is your time zone? [Europe/Paris] America/Sao_Paulo
+$ What is your time zone? 
 $ Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) Y 
 $ Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n) n
 $ Do you want to upload your website using FTP? (y/N) n
@@ -343,6 +343,34 @@ $ travis encrypt GH_TOKEN=AUTHENTICATIONTOKENFROMGITHUB --add env.global
 From now on, every time you commit a change to master, it should kick off a build in travis ci and push the code to your _yourusername.github.io_
 
 Now go grab a drink, its well deserved! Cheers!
+
+
+##### References
+
+Below are a list of links or other guides that have helped me get to this point.
+
+_https://hackercodex.com/guide/mac-development-configuration/_
+
+_https://hackercodex.com/guide/python-development-environment-on-mac-osx/_
+
+_https://superuser.com/questions/915810/pip-not-working-on-hombrew-python-2-7-install_
+
+_http://docs.getpelican.com/en/3.6.3/install.html_
+
+_https://github.com/getpelican/pelican-themes_
+
+_https://git-scm.com/docs/gitmodules_
+
+_https://github.com/getpelican/pelican/blob/master/docs/tips.rst_
+
+_https://help.github.com/articles/using-a-custom-domain-with-github-pages/_
+
+_https://zonca.github.io/2013/09/automatically-build-pelican-and-publish-to-github-pages.html_
+
+_https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/_
+
+_https://docs.travis-ci.com/user/github-oauth-scopes_
+
 
 
 
