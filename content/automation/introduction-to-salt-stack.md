@@ -7,7 +7,7 @@ Author: Miguel Lopez
 Summary: SaltStack 101, Set up your first Salt-Master and Salt-Minion
 
 
-_Technical Environment: SaltStack v1.2123, AWS EC2 (CentOS ami)_
+_Technical Environment: SaltStack v2018.3.0 , AWS EC2 (CentOS ami)_
 
 _Difficulty: Easy_
 
