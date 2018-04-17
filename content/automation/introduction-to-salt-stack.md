@@ -1,15 +1,17 @@
 Title: Introduction to SaltStack
 Date: 2018-03-22
-Modified: 2018-03-22
+Modified: 2018-04-16
 Tags: saltstack, aws, cloud
 Slug: my-super-post
 Author: Miguel Lopez
-Summary: a story of how Salt Master revolutionized the way my organization manages infrastructure, has identical environments and keeps cloud engineers mentally SANE
+Summary: SaltStack 101, Set up your first Salt-Master and Salt-Minion
 
 
 _Technical Environment: SaltStack v1.2123, AWS EC2 (CentOS ami)_
 
 _Difficulty: Easy_
+
+_Read: 25 minutes_
 
 ## **Introduction to SaltStack**
 
@@ -20,6 +22,7 @@ Configuration Management (as it pertains to software infrastructure) is this ide
 Have you ever found yourself in a situation where you’re constantly having to repeat the same tasks on a single VM or fleet of VMs? If so, then configuration management is probably something you need. 
 
 In this post, I’ll cover a few topics:
+
 - Introduction to SaltMaster
 - How to create a salt master node
 - How to connect a salt minion to the master node
@@ -188,6 +191,11 @@ module_dirs:
 
 For the sake of this tutorial, we will only be covering a state that lives in our `/srv/salt/base` file root. I will not be going `modules`, `pillars`, or `node_groups` just quite yet and will leave those for another post. 
 
+```
+[root@salt-master salt]# service salt-master restart
+```
+Quickly restart the salt-master to load the new configurations. 
+
 3. Our first state will live in our `base` environment. Go ahead and create a folder in the `/srv/salt/base` location. 
 
 ```
@@ -253,12 +261,73 @@ The `top.sls` file will apply the `touch-file` state we just created to all salt
 
 It's important to note that it can follow a regex pattern or a node-group. This means that it's extremely important to name your salt-minions accordingly. `'*'` will apply states to all minions whereas `'dev*'` would only those states to salt-minions prefixed with a `dev` name. 
 
-——————
+9. We are now ready to run our first state. Run the following `state.show_top` command to see which states will be applied.
 
-I hope by this point you’ve also discovered Chef, Ansible, Puppet, and other similar offerings and you’re looking for ways to evaluate what makes the most sense for your company. SaltStack is a great tool but there are plenty of other tools that solve similar problems. Research each tool, find one that makes long-term sense and GO FOR IT!
+```
+[root@salt-master base]# salt '*' state.show_top
+dev-minion-01:
+    ----------
+    base:
+        - touch-file
+```
+_I always run `state.show_top` before running a `state.apply` to double check my salt-master is doing what I want. I can't stress this enough. It has saved me so many times._
 
-SaltStack has done wonders for my organization. Prior to adopting this toolchain, our infrastructure was all over the place. Developers managed their own boxes. No environment shared any similarity. Knowledge of how to setup infrastructure was lost in half-finished documentation or internalized by senior developers. It’s safe to say we were all over the place without it. 
+10. If everything looks good, run the `state.apply` command to push the state down to the salt-minion.
 
-Adopting SaltStack took a lot of maturity and patience. You had to trust that building out the automation scripts will save you lots of time in the end in the long run. In the 1+ years since adopting it, we’ve had great success managing our infrastructure. DEV/TEST/STAGE/PROD are all similar minus environment configurations. VMs are stateless meaning I can tear down any of my AWS environments and have a fresh copy up within minutes. I’ve heard less “It works on my machine” issues.
+```
+[root@salt-master base]# salt '*' state.apply
+dev-minion-01:
+----------
+          ID: /tmp/hello-world.txt
+    Function: file.managed
+      Result: True
+     Comment: File /tmp/hello-world.txt updated
+     Started: 06:17:46.887924
+    Duration: 70.182 ms
+     Changes:
+              ----------
+              diff:
+                  New file
+              mode:
+                  0644
 
-Tune in to future posts where I’ll share some SaltStack best practices, automation scripts and creative ways to solve problems with SaltStack. 
+Summary for dev-minion-01
+------------
+Succeeded: 1 (changed=1)
+Failed:    0
+------------
+Total states run:     1
+Total run time:  70.182 ms
+```
+
+If everything went well, you should see `Succeeded: 1 (changed=1)`. This means that your state was successfully applied. You should now head back over to your salt-minion and verify that the state was successfully pushed. 
+
+11. Verify `/tmp/hello-world.txt` exists on the salt-minion exists. 
+
+```
+[root@ip-10-0-1-97 ec2-user]# cat /tmp/hello-world.txt
+hello world
+```
+
+There you have it, your first salt state!
+
+## **Terraform**
+
+In case you are familiar with Terraform, I've started to make some effort toward terraforming this whole process. Feel free to follow that progress on my [github](https://github.com/lopezm1/terraform-101/blob/master/mgmt/main.tf).
+
+You can also find some salt-scripts that'll bootstrap autoscaling VMs as salt-minions [here](https://github.com/lopezm1/salt-scripts). 
+
+## **Conclusion**
+
+I've just scraped the surfrace with what you can do with Salt-Master. Over the next few weeks I'll be sure to add some more articles that will describe how to:
+
+- configure different enviroments
+- use pillars
+- automatically push states to auto-scaling groups
+- using salt formulas to create modular states
+
+By this point, I hope you can understand how awesome Salt really is. SaltStack has been fantastic for our company and I hope it can do the same for you.
+
+In case you are evaluating other tools, I recommend you check out [Chef](https://www.chef.io/chef/), [Ansible](https://www.ansible.com/) and [Puppet](https://puppet.com/) as they all have very similar functionality. 
+
+It takes time and patience to fully adopt a configuration manager but the payoff is totally worth it. 
