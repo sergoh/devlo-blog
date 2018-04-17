@@ -6,6 +6,7 @@ Slug: if-else-terraform
 Author: Miguel Lopez
 Summary: Using if-else statements in terraforms
 
+
 _Terraform v0.11.5_
 
 ## **Introduction**
