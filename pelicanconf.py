@@ -13,6 +13,7 @@ SITEDESCRIPTION = 'DevLo - The Lopez brothers\' development blog.'
 THEME = "./Flex"
 HOME_HIDE_TAGS = True
 PYGMENTS_STYLE = 'github'
+DISABLE_URL_HASH = True
 
 ROBOTS = 'index, follow'
 
@@ -30,16 +31,14 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('', ''),
-         ('Contact', 'http://python.org/'))
+#LINKS = (('', ''),('Contact', 'http://python.org/'))
 
 # Social widget
 MIGUEL_SOCIAL = (('linkedin', 'https://www.linkedin.com/in/lopezm1/'),
           ('github', 'https://github.com/lopezm1'))
 
 SERGIO_SOCIAL = (('linkedin', 'https://www.linkedin.com/in/sergiolopezjr/'),
-          ('github', 'https://github.com/sergoh'),
-          ('twitter', 'https://twitter.com/mrsergoh'))
+          ('github', 'https://github.com/sergoh'))
 
 DEFAULT_PAGINATION = 10
 
