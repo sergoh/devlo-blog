@@ -77,12 +77,7 @@ stages {
             steps {
                 dir('terraform'){
                     sh """
-                    export AWS_SECRET_ACCESS_KEY=${env.SECRET_ACCESS_KEY}
-                    export AWS_ACCESS_KEY_ID=${env.ACCESS_KEY_ID}
-                    export AWS_DEFAULT_REGION=${REGION}
-                    /opt/bin/terraform --version
-                    /opt/bin/terraform init
-                    /opt/bin/terraform plan --out=plan.out
+                    serverless config credentials --provider provider --key ${env.ACCESS_KEY_ID} --secret ${env.SECRET_ACCESS_KEY}
                     """
                 }
             }
@@ -94,7 +89,7 @@ There are two important things to note here.
 1. It's important to use `"`. Double quotes is our way of signifying that this is a groovy string.
 2. You must use the `${env.VARIABLE}` syntax to get variables from the envrionment section.
 
-In the previous example, you can see that we are exporting AWS Secret Keys and AWS Access Keys so that the Terraform CLI can use the credentials. It should be noted that the CLI Commands are being evaluated on the fly. This means that a string containing the AWS SSM CLI Command is loaded from the `environment` block, the command is ran, and the result is then loaded into the `export AWS_SECRET_ACCESS_KEY` varriable. The CLI command from the `enviornment` block is **NOT** ran until it is called within the `sh` command. 
+In the previous example, you can see that we are exporting AWS Secret Keys and AWS Access Keys so that the Serverless CLI can use the credentials. It should be noted that the CLI Commands are being evaluated on the fly. This means that a string containing the AWS SSM CLI Command is loaded from the `environment` block, the command is ran, and the result is then loaded into the CLI command. The CLI command from the `enviornment` block is **NOT** ran until it is called within the `sh` command. 
 
 Using AWS SSM in our Jenkinsfile has been awesome because it allows our pipeline to remain flexibile. My cloud team only has to remember to update ther Jenkins IAM role key and secret in one location should they ever choose to rotate it. 
 
