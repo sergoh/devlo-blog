@@ -12,7 +12,7 @@ SITESUBTITLE = 'The Lopez brothers\' development blog'
 SITEDESCRIPTION = 'DevLo - The Lopez brothers\' development blog.'
 THEME = "./Flex"
 HOME_HIDE_TAGS = True
-PYGMENTS_STYLE = 'github'
+PYGMENTS_STYLE = 'tango'
 DISABLE_URL_HASH = True
 
 ROBOTS = 'index, follow'
