@@ -8,13 +8,6 @@ This blog is dedicated to talking about sh*t we couldn't figure out right away. 
 
 ## **Who Are We?**
 
-Two brothers who work as Site Reliability Engineers.
+**Miguel Lopez** is a site reliability engineer @ Hearsay Systems. Say hi on [Linkedin](https://www.linkedin.com/in/lopezm1/)! 
 
-**Miguel Lopez** is a software engineer, AWS enthusiast, and automation specialist @[Hearsay Systems](https://hearsaysystems.com/). 
-He loves helping teams build great software through the power of cloud automation. Catch him @ happy hour, a pool hall, or gaming outside of work.
-
-**Sergio Lopez** is a full stack engineer, SPA specialist and SRE @[Choice Hotels](https://www.choicehotels.com/). He loves to create maintainable SPAs using javascript frameworks like angularJS and reactJS. When he's not geeking out, he loves being an on-field mascot for the @[Arizona Diamondbacks](http://arizona.diamondbacks.mlb.com/ari/fan_forum/legends_sweeps.jsp).
-
-## **What does DevLo mean?**
-
-Any Guesses? It's actually nothing fancy! It's short for **Dev**eloper **Lo**pez.
+**Sergio Lopez** is a full stack engineer @ Hearsay Systems.
