@@ -1,4 +1,4 @@
-Title: for_each Loops w/ If Statements in Terraform 0.12.6+
+Title: for_each loops w/ if statements in Terraform 0.12.6+
 Date: 2021-12-01
 Modified: 2021-12-01
 Tags: terraform, logic, aws, if, loop, for-each
