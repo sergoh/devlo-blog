@@ -1,3 +1,4 @@
 [submodule "Flex"]
     path = Flex
-	url = https://github.com/sergoh/Flex.git
+    url = https://github.com/lopezm1/Flex.git
+    branch = update-devlo

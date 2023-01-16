@@ -5,14 +5,14 @@ from __future__ import unicode_literals
 AUTHOR = 'Lopez Brothers'
 FAVICON = '/favicon.ico'
 SITELOGO = '/images/Devlo-Logo.png'
-SITENAME = u'DevLo'
-SITETITLE = u'DevLo'
+SITENAME = u'DevLo Software Blog'
+#SITETITLE = u'DevLo'
 SITEURL = 'http://localhost:8000'
-SITESUBTITLE = 'The Lopez brothers\' development blog'
-SITEDESCRIPTION = 'DevLo - The Lopez brothers\' development blog.'
+SITESUBTITLE = 'Lopez Brothers Blog'
+SITEDESCRIPTION = 'DevLo - Software Blog.'
 THEME = "./Flex"
 HOME_HIDE_TAGS = True
-PYGMENTS_STYLE = 'tango'
+PYGMENTS_STYLE = "arduino"
 DISABLE_URL_HASH = True
 
 ROBOTS = 'index, follow'
@@ -47,6 +47,7 @@ DEFAULT_PAGINATION = 10
 
 STATIC_PATHS = ['images', 'extra']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},'extra/favicon.ico': {'path': 'favicon.ico'}}
+CUSTOM_CSS = 'extra/static/custom.css'
 
 # Menu
 MAIN_MENU = True

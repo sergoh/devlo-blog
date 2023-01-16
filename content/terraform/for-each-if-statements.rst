@@ -1,7 +1,7 @@
-:title: for_each loops w/ if statements in Terraform 0.12.6+
+:title: Terraform for_each loops w/ if statements in Terraform 0.12.6+
 :date: 2021-12-01
 :modified: 2021-12-01
-:tags: terraform, logic, aws, if, loop, for-each
+:tags: terraform, terraform, logic, aws, if, loop, for-each, for-loop, loops
 :category: terraform
 :slug: for-each-if-statements
 :authors: Miguel Lopez
@@ -94,7 +94,7 @@ Here is the full example on :code:`load_balancer` module:
       for_each  = { for key, value in var.services : key => value if value.load_balancer_enabled == true }
       source    = "../load-balancer"  # custom module reference as an example
 
-      name                       = "${each.key}"
+      name                       = each.key
       enable_deletion_protection = lookup(each.value.load_balancer, "enable_deletion_protection", true)
 
       domain             = lookup(each.value.load_balancer, "domain", null)
@@ -104,7 +104,7 @@ Here is the full example on :code:`load_balancer` module:
 
       tags = merge(jsondecode(var.tags), lookup(each.value, "tags", {}), local.common_tags)
 
-      target_groups        = { for key, value in lookup(each.value.load_balancer, "target_groups", {}) : key => merge(value, { target_group_name = format("%s-%s-%s", each.key, key, var.color) }) }
+      target_groups        = lookup(each.value.load_balancer, "target_groups", {})
       load_balancer_listeners         = lookup(each.value.load_balancer, "listeners", {})
       extra_listener_rules = lookup(each.value.load_balancer, "extra_listener_rules", {})
       extra_ssl_certs      = lookup(each.value.load_balancer, "extra_ssl_certs", {})
@@ -123,7 +123,7 @@ Terraform load balancers. Network load balancers will always require a VPC link 
 Inputs
 -------
 
-.. code-block:: yml
+.. code-block:: yaml
 
     extra_load_balancers:
       balancer_1:
