@@ -15,7 +15,6 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    # needs: test-local  --  add this need once we have a test suite
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
