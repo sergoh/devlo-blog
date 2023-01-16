@@ -1,0 +1,83 @@
+:root {
+    --dark-blue: #414C6B;
+    --blue: #1E80C1;
+    --teal: #5BAEB7;
+    --blizzard-blue: #A5DEF2;
+    --white: #ffffff
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-blue);
+}
+
+a {
+    color: var(--teal);
+  }
+
+h2 > a {
+    color: var(--blue);
+}
+
+a.btn {
+    background-color: var(--blue);
+}
+
+.authors-profiles {
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.authors-profiles > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    font-size: 18px;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+.authors-profiles > figure {
+    margin: 0 10px;
+}
+
+.authors-profiles > div > figure > figcaption {
+    color: var(--white);
+}
+
+.authors-profiles > div > figure > img {
+    max-width: 80px; 
+}
+
+main > article {
+    max-width: 90%;
+  }
+
+@media only screen and (min-width: 375px) 
+and (max-width: 768px)  {
+    nav {
+     display: none;
+    }
+} 
+
+@media only screen and (min-width: 768px) {
+    nav {
+     display: block  ;
+    }
+} 
+
+@media only screen and (min-width: 1025px) {
+    .authors-profiles > div > figure > img {
+        max-width: 140px;
+    }    
+} 
+  

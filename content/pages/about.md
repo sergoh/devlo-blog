@@ -8,6 +8,6 @@ This blog is dedicated to talking about sh*t we couldn't figure out right away. 
 
 ## **Who Are We?**
 
-**Miguel Lopez** is a site reliability engineer @ Hearsay Systems. Say hi on [Linkedin](https://www.linkedin.com/in/lopezm1/)! 
+**Miguel Lopez** is a full stack engineer @ Hearsay Systems. Say hi on [Linkedin](https://www.linkedin.com/in/lopezm1/)! 
 
 **Sergio Lopez** is a full stack engineer @ Hearsay Systems.
