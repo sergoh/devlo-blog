@@ -1,6 +1,6 @@
 Title: Entrypoint Script with Localstack and Docker-Compose
-Date: 2022-01-16
-Modified: 2022-01-16
+Date: 2023-01-16
+Modified: 2023-01-16
 Tags: docker, docker-compose, localstack, serverless, lambda, aws, python, cloud, eventbridge ,sns, s3, sqs, api, gateway, local, developer, django, python, entrypoint
 Slug: entrypoint-script-with-localstack
 Author: Miguel Lopez

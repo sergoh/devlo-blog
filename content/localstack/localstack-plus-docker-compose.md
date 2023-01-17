@@ -1,6 +1,6 @@
 Title: Run Localstack with Docker-Compose
-Date: 2022-01-16
-Modified: 2022-01-16
+Date: 2023-01-16
+Modified: 2023-01-16
 Tags: docker, docker-compose, localstack, serverless, lambda, aws, python, cloud, eventbridge ,sns, s3, sqs, api, gateway, local, developer, django, python
 Slug: run-localstack-with-docker-compose
 Author: Miguel Lopez
