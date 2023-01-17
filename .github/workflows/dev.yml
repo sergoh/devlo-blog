@@ -15,10 +15,6 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    env:
-      TRAVIS_REPO_SLUG: ${{ github.repository }} 
-      TRAVIS_BRANCH: ${{ github.head_ref }} 
-      TRAVIS_PULL_REQUEST: ${{ github.event.number }}
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
@@ -38,9 +34,9 @@ jobs:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         with:
           source-directory: 'output'
-          destination-github-username: 'cpina'
+          destination-github-username: 'sergoh'
           destination-repository-name: 'sergoh.github.io'
-          user-email: carles3@pina.cat
+          user-email: sergoh@outlook.com
           target-branch: master
 
   
