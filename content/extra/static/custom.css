@@ -15,6 +15,10 @@ h6 {
   color: var(--dark-blue);
 }
 
+h1 {
+    font-weight: bold;
+}
+
 a {
     color: var(--teal);
   }
