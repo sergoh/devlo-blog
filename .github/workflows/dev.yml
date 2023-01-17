@@ -15,10 +15,6 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    env:
-      TRAVIS_REPO_SLUG: ${{ github.repository }} 
-      TRAVIS_BRANCH: ${{ github.head_ref }} 
-      TRAVIS_PULL_REQUEST: ${{ github.event.number }}
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
