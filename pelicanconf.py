@@ -46,7 +46,7 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 STATIC_PATHS = ['images', 'extra']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},'extra/favicon.ico': {'path': 'favicon.ico'}}
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},'extra/favicon.ico': {'path': 'favicon.ico'}, 'extra/ads.txt': {'path': 'ads.txt'}}
 CUSTOM_CSS = 'extra/static/custom.css'
 
 # Menu
