@@ -46,8 +46,28 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 STATIC_PATHS = ['images', 'extra']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},'extra/favicon.ico': {'path': 'favicon.ico'}, 'extra/ads.txt': {'path': 'ads.txt'}}
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/ads.txt': {'path': 'ads.txt'},
+    'extra/robots.txt': {'path': 'robots.txt'}
+}
+
 CUSTOM_CSS = 'extra/static/custom.css'
+
+SITEMAP = {
+    "format": "xml",
+    "priorities": {
+        "articles": 0.6,
+        "indexes": 0.6,
+        "pages": 0.5
+    },
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "daily",
+        "pages": "monthly"
+    }
+}
 
 # Menu
 MAIN_MENU = True

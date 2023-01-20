@@ -2,3 +2,4 @@ pelican
 Markdown
 typogrify
 fabric
+pelican-sitemap
