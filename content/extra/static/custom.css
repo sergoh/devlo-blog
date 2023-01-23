@@ -63,7 +63,7 @@ a.btn {
 }
 
 main > article {
-    max-width: 90%;
+    max-width: 75%;
   }
 
 @media only screen and (min-width: 375px) 
