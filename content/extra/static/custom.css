@@ -62,10 +62,6 @@ a.btn {
     max-width: 80px; 
 }
 
-main > article {
-    max-width: 75%;
-}
-
 @media only screen and (min-width: 375px) 
 and (max-width: 768px)  {
     nav {
@@ -76,6 +72,10 @@ and (max-width: 768px)  {
 @media only screen and (min-width: 768px) {
     nav {
      display: block;
+    }
+
+    main > article {
+        max-width: 75%;
     }
 } 
 

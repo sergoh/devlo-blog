@@ -77,9 +77,17 @@ services:
 ```
 1. Copy and paste the following code into `docker-compose.yml`.
 
-2. Build the images: `docker-compose -f docker-compose.yml build --pull`
+2. Build the images: 
 
-3. Run the containers: `docker-compose -f docker-compose.yml up`
+    ```
+    docker-compose -f docker-compose.yml build --pull
+    ```
+
+3. Run the containers: 
+
+    ```
+    docker-compose -f docker-compose.yml up
+    ```
 
 At this point, `localstack` will start alongside the `api` container and will be ready to mock AWS services at `http://localstack:4566`. 
 
