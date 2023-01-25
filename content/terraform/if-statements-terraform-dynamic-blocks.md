@@ -12,7 +12,7 @@ Read: 5 minutes
 
 ## Introduction
 
-The `default_action` for the Terraform `aws_lb_listener` resource is known as a Terraform configuration block. Configuration blocks can be wrapped in a `dynamic` block to conditionally include / exclude different configurations blocks for a resource.
+The `default_action` for the Terraform `aws_lb_listener` resource is known as a Terraform configuration block. Configuration blocks can be wrapped in a `dynamic` block to conditionally include different configurations blocks for a resource.
 
 [More Info on Dynamic Blocks](https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks).
 
