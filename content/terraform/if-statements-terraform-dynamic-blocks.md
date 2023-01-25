@@ -41,12 +41,14 @@ dynamic "default_action" {
 
 ## Real Terraform Examples
 
-Here's how to use these if-statements in a real Terraform file..
+Here's how to use these if-statements in Terraform:
 
-1. Notice the **two** conditionals if-statements for the two different `dynamic "default_action" {}` blocks in the `aws_lb_listener` resource. 
-2. The `default_action` is selected by a matching the `var.default_action_type` to `dynamic` block.
-3. Use `var.target_group_arn` for `var.default_action_type == "forward"` to include the target group.
-4. Use `varauthenticate_oidc` for `var.default_action_type == "authenticate-oidc"` to include oidc configuration.
+- Notice the **two** conditionals if-statements for the two different `dynamic "default_action" {}` blocks in the `aws_lb_listener` resource. 
+- The `default_action` is selected by a matching the `var.default_action_type` to `dynamic` block.
+
+Use `var.target_group_arn` for `var.default_action_type == "forward"` to include the target group.
+
+Use `var.authenticate_oidc` for `var.default_action_type == "authenticate-oidc"` to include oidc configuration.
 
 **resources.tf**
 ```terraform
