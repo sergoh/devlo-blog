@@ -1,7 +1,7 @@
 Title: If Statements Inside Terraform Dynamic Blocks 
 Date: 2023-01-24
 Modified: 2023-01-24
-Tags: local, terraform, terragrunt, aws, amazon, dynamic, resources, modules, django, python, cloud, eventbridge, sns, s3, sqs, if, if-statements, logic, if-logic, conditional
+Tags: local, terraform, terragrunt, aws, amazon, dynamic, modules, django, python, cloud, eventbridge, sns, s3, sqs, if, if-statements, logic, if-logic, conditional, aws_lb_listener, resource
 Slug: if-statements-terraform-dynamic-blocks
 Author: Miguel Lopez
 Summary: Learn how to use if-statements inside Terraform Dynamic blocks.
