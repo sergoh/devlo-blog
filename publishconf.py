@@ -28,11 +28,11 @@ GOOGLE_ADSENSE = {
     'ca_id': 'ca-pub-2119138261035978',    # Your AdSense ID
     'page_level_ads': True,          # Allow Page Level Ads (mobile)
     'ads': {
-        'aside': '1234561',          # Side bar banner (all pages)
-        'main_menu': '1234562',      # Banner before main menu (all pages)
+        'aside': '7180191250',          # Side bar banner (all pages)
+        'main_menu': '7180191250',      # Banner before main menu (all pages)
         'index_top': '',      # Banner after main menu (index only)
-        'index_bottom': '1234564',   # Banner before footer (index only)
+        'index_bottom': '7180191250',   # Banner before footer (index only)
         'article_top': '',    # Banner after article title (article only)
-        'article_bottom': '1234566', # Banner after article content (article only)
+        'article_bottom': '7180191250', # Banner after article content (article only)
     }
 }
