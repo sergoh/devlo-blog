@@ -31,8 +31,8 @@ GOOGLE_ADSENSE = {
         'aside': '7180191250',          # Side bar banner (all pages)
         'main_menu': '7180191250',      # Banner before main menu (all pages)
         'index_top': '',      # Banner after main menu (index only)
-        'index_bottom': '7180191250',   # Banner before footer (index only)
+        'index_bottom': '5952522457',   # Banner before footer (index only)
         'article_top': '',    # Banner after article title (article only)
-        'article_bottom': '7180191250', # Banner after article content (article only)
+        'article_bottom': '5952522457', # Banner after article content (article only)
     }
 }
