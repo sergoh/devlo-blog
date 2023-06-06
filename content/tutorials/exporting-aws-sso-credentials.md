@@ -4,7 +4,7 @@ Modified: 2023-06-05
 Tags: aws, aws-cli, sso, login, credentials, docker, docker-compose, single-sign-on, bash, aws-sso
 Slug: exporting-aws-sso-login-credentials
 Author: Miguel Lopez
-Summary: Export AWS Credentials after AWS CLI SSO Login. Create temporary AWS Access Keys and export them to your local bash environment or docker containers. 
+Summary: Run AWS SSO Login and create temporary AWS credentials. Save and use these AWS credentials for your local bash environment or docker containers. 
 
 Technical Stack: AWS CLI, Single Sign On, Docker, Docker-Compose, Bash
 
