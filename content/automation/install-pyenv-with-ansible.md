@@ -50,9 +50,9 @@ One option of using this role will be inside your `playbook.yml` file:
         - 3.10.6
 ```
 
-### Use Ansible Role in Role File
+### Import Role Inside Existing Tasks
 
-You can also import the `staticdev.pyenv` role inside an existing playbook role:
+You can also import the `staticdev.pyenv` role inside an existing playbook task like so:
 
 ```yml
 - name: install pyenv
