@@ -10,7 +10,7 @@ Technical Stack: Pyenv, Ansible, Linux
 
 ## Introduction
 
-Pyenv is a tool for managing multiple versions of Python on your local machine. By the end of this tutortial, you will have Pyenv installed on Ubuntu using the [staticdev/ansible-role-pyenv](https://github.com/staticdev/ansible-role-pyenv) Ansible Role.
+Pyenv is a tool for managing multiple versions of Python on your local machine. By the end of this turtorial, you will understand how you can use [staticdev/ansible-role-pyenv](https://github.com/staticdev/ansible-role-pyenv) Ansible Role.
 
 
 ### Install Ansible Role
@@ -49,6 +49,23 @@ One option of using this role will be inside your `playbook.yml` file:
         - 3.11.0
         - 3.10.6
 ```
+
+### Use Ansible Role in Role File
+
+You can also import the `staticdev.pyenv` role inside an existing playbook role:
+
+```yml
+- name: install pyenv
+  import_role:
+    name: staticdev.pyenv
+  vars:
+    pyenv_env: 'system'
+    pyenv_global: ["3.8.16"]
+    pyenv_python_versions: ["3.8.16"]
+    pyenv_uninstall_python_w_wrong_configure_opts: False
+```
+
+### Full Configuration Options
 
 For a full list of configuration options, please visit the github page for this role: [staticdev/ansible-role-pyenv](https://github.com/staticdev/ansible-role-pyenv#role-variables)
 
