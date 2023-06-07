@@ -10,7 +10,7 @@ Technical Stack: Pyenv, Ansible, Linux
 
 ## Introduction
 
-Pyenv is a tool for managing multiple versions of Python on your local machine. By the end of this turtorial, you will understand how you can use [staticdev/ansible-role-pyenv](https://github.com/staticdev/ansible-role-pyenv) Ansible Role.
+Pyenv is a tool for managing multiple versions of Python on your local machine. By the end of this turtorial, you will understand how you can use [staticdev/ansible-role-pyenv](https://github.com/staticdev/ansible-role-pyenv) Ansible role to manage your Pyenv installation.
 
 
 ### Install Ansible Role
