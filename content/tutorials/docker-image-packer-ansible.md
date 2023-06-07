@@ -1,7 +1,7 @@
-Title: Create Docker Image with Packer and Ansible
+Title: Dockerfile with Packer and Ansible Installed
 Date: 2023-06-06
 Modified: 2023-06-06
-Tags: docker, packer, ansible, devops, cicd, docker-compose, automation, bash, hashicorp, ami, aws, machine-image, infrastructure-as-code, images, img
+Tags: docker, packer, ansible, devops, cicd, docker-compose, automation, bash, hashicorp, ami, aws, machine-image, infrastructure-as-code, images, img, dockerfile
 Slug: create-docker-image-with-packer-and-ansible
 Author: Miguel Lopez
 Summary: Create a Docker Image with Packer + Ansible installed. This is useful for creating a Docker Image that can be used for CI/CD pipelines.
