@@ -129,7 +129,7 @@ Running "serverless" from node_modules
 derezzed-db-infrastructure:
   DatabaseHostParamName: /derezzed/dev/db-host
   DatabaseClusterName: derezzeddbcluster-dev
-  AuroraDerezzedSecretName: arn:aws:secretsmanager:us-west-2:590762009186:secret:derezzeddb/dev-DldvfU
+  AuroraDerezzedSecretName: arn:aws:secretsmanager:us-west-2:xxxxxxx:secret:derezzeddb/dev-DldvfU
   ServerlessDeploymentBucketName: hsl-dev-serverless
 ```
 
