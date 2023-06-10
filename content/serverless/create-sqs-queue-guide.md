@@ -57,7 +57,7 @@ resources:
       Value: !GetAtt DerezzedMessagesQueue.QueueUrl
 ```
 
-## Deploying the Serverless RDS Cluster
+## Deploying the SQS Queue
 
 Run the following command to deploy the Serverless RDS Cluster:
 
@@ -87,7 +87,7 @@ derezzed-base-infrastructure:
 
 ## Connecting to SQS from your Lambda
 
-IAM access to SQS is automatically granted to your Lambda Function with the `events` block. You can use the following serverless.yml to grant your lamdba function access to SQS:
+IAM access to SQS is automatically granted to your Lambda Function with the `events` block. You can use the following `serverless.yml` to connect your SQS queue to your Lambda Function:
 
 ```yml
 functions:
