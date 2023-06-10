@@ -2,7 +2,7 @@ Title: Serverless Framework Guide: Creating a Serverless RDS Cluster
 Date: 2023-06-10
 Modified: 2023-06-10
 Tags: serverless, lambda, aws, python, cloud, developer, django, python, rds, serverless-framework, guide, python3.9, postgres, mysql, aurora, serverless-rds, serverless-rds-cluster
-Slug: sls-framework-guide-creating-serverless-rds-cluster
+Slug: sls-framework-guide-creating-sqs-queue
 Author: Miguel Lopez
 Summary: A guide to help you deploy serverless RDS clusters using the Serverless Framework. By the end of this guide, you will have a serverless Postgres database created by Serverless Framework to support your Lambda Functions.
 
