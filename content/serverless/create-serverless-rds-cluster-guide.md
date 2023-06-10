@@ -22,10 +22,10 @@ To deploy the following Serverless Framework template, you will need the followi
 
 ## Creating a Serverless RDS Cluster
 
-Using Serverless Framwework, the following example creates these resources in AWS:
-- AWS::RDS::DBCluster
-- AWS::SecretsManager::Secret
-- AWS::SSM::Parameter
+Using Serverless Framwework, the following `serverless.yml` example creates these resources in AWS:
+- [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)
+- [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html)
+- [AWS::SSM::Parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html)
 
 In addition to the Database, the template also creates a secret and SSM parameter to store the database password and host address. Your lambda can use these values to connect to the database.
 
