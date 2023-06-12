@@ -23,7 +23,10 @@ To deploy the following Serverless Framework template, you will need the followi
 ## Creating an SQS Queue
 
 Using Serverless Framwework, the following `serverless.yml` example creates these resources in AWS:
+
 - [AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)
+
+
 
 ```yml
 service: derezzed-base-infrastructure
