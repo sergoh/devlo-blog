@@ -1,8 +1,8 @@
-Title: Serverless Framework Guide: Create an SQS Queue
+Title: Serverless Framework: Creating an SQS Queue Example
 Date: 2023-06-10
 Modified: 2023-06-10
 Tags: serverless, lambda, aws, python, cloud, developer, django, python, rds, serverless-framework, guide, python3.9, postgres, mysql, aurora, sqs, simple, queue, service, serverless-sqs, serverless-sqs-queue
-Slug: sls-framework-guide-creating-serverless-rds-cluster
+Slug: sls-framework-guide-creating-sqs-queue
 Author: Miguel Lopez
 Summary: A guide to help you deploy an SQS queue using the Serverless Framework. By the end of this guide, you will have an SQS queue deployed by Serverless Framework and connected to your Lambda Functions.
 
@@ -48,7 +48,7 @@ resources:
     DerezzedMessagesQueue:
       Type: "AWS::SQS::Queue"
       Properties:
-        QueueName: hsl-${opt:stage, self:provider.stage}-derezzed-messages
+        QueueName: ${opt:stage, self:provider.stage}-derezzed-messages
         DelaySeconds: 0
         MessageRetentionPeriod: 345600 # 4 days
         VisibilityTimeout: 30
@@ -84,8 +84,8 @@ Run `sls outputs --stage dev` to see the outputs of the deployment. You'll see t
 Running "serverless" from node_modules
 
 derezzed-base-infrastructure:
-  sqsUrl: https://sqs.us-west-2.amazonaws.com/xxxxxxx/hsl-dev-derezzed-messages
-  sqsArn: arn:aws:sqs:us-west-2:xxxxxx:hsl-dev-derezzed-messages
+  sqsUrl: https://sqs.us-west-2.amazonaws.com/xxxxxxx/dev-derezzed-messages
+  sqsArn: arn:aws:sqs:us-west-2:xxxxxx:dev-derezzed-messages
 ```
 
 ## Connect your queue to your Lambda Function

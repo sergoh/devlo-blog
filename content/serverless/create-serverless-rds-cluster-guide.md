@@ -1,8 +1,8 @@
-Title: Serverless Framework Guide: Creating a Serverless RDS Cluster
+Title: Serverless Framework: Creating an RDS Serverless Database Example
 Date: 2023-06-10
 Modified: 2023-06-10
 Tags: serverless, lambda, aws, python, cloud, developer, django, python, rds, serverless-framework, guide, python3.9, postgres, mysql, aurora, serverless-rds, serverless-rds-cluster
-Slug: sls-framework-guide-creating-sqs-queue
+Slug: sls-framework-guide-creating-serverless-rds-cluster
 Author: Miguel Lopez
 Summary: A guide to help you deploy serverless RDS clusters using the Serverless Framework. By the end of this guide, you will have a serverless Postgres database created by Serverless Framework to support your Lambda Functions.
 
@@ -130,7 +130,7 @@ derezzed-db-infrastructure:
   DatabaseHostParamName: /derezzed/dev/db-host
   DatabaseClusterName: derezzeddbcluster-dev
   AuroraDerezzedSecretName: arn:aws:secretsmanager:us-west-2:xxxxxxx:secret:derezzeddb/dev-DldvfU
-  ServerlessDeploymentBucketName: hsl-dev-serverless
+  ServerlessDeploymentBucketName: serverless-deployments
 ```
 
 ## Connecting to the Cluster from your local machine
