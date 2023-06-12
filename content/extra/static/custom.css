@@ -73,10 +73,6 @@ and (max-width: 768px)  {
     nav {
      display: block;
     }
-
-    main > article {
-        max-width: 75%;
-    }
 } 
 
 @media only screen and (min-width: 1025px) {
