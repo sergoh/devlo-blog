@@ -58,13 +58,13 @@ CUSTOM_CSS = 'extra/static/custom.css'
 SITEMAP = {
     "format": "xml",
     "priorities": {
-        "articles": 0.6,
-        "indexes": 0.6,
+        "articles": 0.8,
+        "indexes": 0.5,
         "pages": 0.5
     },
     "changefreqs": {
-        "articles": "monthly",
-        "indexes": "daily",
+        "articles": "daily",
+        "indexes": "monthly",
         "pages": "monthly"
     }
 }

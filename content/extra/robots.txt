@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.devlo.com/sitemap.xml
+Sitemap: https://www.devlo.io/sitemap.xml
