@@ -50,7 +50,8 @@ EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/ads.txt': {'path': 'ads.txt'},
-    'extra/robots.txt': {'path': 'robots.txt'}
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/google201f3609f5b46efa.html': {'path': 'google201f3609f5b46efa.html'},
 }
 
 CUSTOM_CSS = 'extra/static/custom.css'
