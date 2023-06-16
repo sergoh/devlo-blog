@@ -73,7 +73,7 @@ Deploying to stage dev
     ✔  derezzed-fastapi-lambda › deployed › 50s
 ```
 
-## Conclusion
+## Improving Serverless Application Resiliency
 
 Use Serverless Compose to improve the resiliency of your application. Think about splitting important resources like **databases, queues, and layers** into their own Serverless projects. This allows you to preserve those key resources should you need to delete and redeploy your Lambda functions completely.
 
