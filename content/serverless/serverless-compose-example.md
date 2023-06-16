@@ -69,7 +69,7 @@ Running "serverless" from node_modules
 Deploying to stage dev
 
     ✔  derezzed-base-infrastructure › deployed › 9s
-    ✔  derezzed-requirements-layer › deployed › 10s
+    ✔  derezzed-db-infrastructure › deployed › 10s
     ✔  derezzed-fastapi-lambda › deployed › 50s
 ```
 
@@ -80,3 +80,10 @@ Use Serverless Compose to improve the resiliency of your application. Think abou
 You don't want to be the person who accidentally deletes the production database because you were trying to fix a bug in your Lambda function.
 
 Seperate your concerns and use Serverless Compose to deploy them all at once.
+
+## Other Serverless Framework Examples
+
+Check out the other Serverless Framework example projects I've created:
+
+- [Serverless Framework: Creating an SQS Queue Example](https://www.devlo.io/sls-framework-guide-creating-sqs-queue.html)
+- [Serverless Framework: Creating an RDS Serverless Database Example](https://www.devlo.io/sls-framework-guide-creating-serverless-rds-cluster.html)
