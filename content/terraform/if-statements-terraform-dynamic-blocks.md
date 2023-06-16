@@ -4,7 +4,7 @@ Modified: 2023-06-16
 Tags: terraform, terragrunt, aws, amazon, dynamic, modules, django, python, cloud, if, if-statements, logic, if-logic, conditional, aws_lb_listener, resource
 Slug: if-statements-terraform-dynamic-blocks
 Author: Miguel Lopez
-Summary: A guide to help you build if-statements inside Terraform dynamic blocks. By the end of this guide, you will understand how to create two **default_action** blocks for the **aws_lb_listener** resource.
+Summary: A guide to help you build if-statements inside Terraform dynamic blocks. By the end of this guide, you will understand how to create two **default_action** blocks for the **aws_lb_listener** resource (and only use one of them).
 
 Technical Stack: AWS, Terraform
 
