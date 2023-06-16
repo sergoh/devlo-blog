@@ -36,7 +36,7 @@ services:
     dependsOn:
       - derezzed-base-infrastructure
     params:
-      derezzedSQSArn: ${relate-base-infrastructure.derezzedSQSArn}
+      derezzedSQSArn: ${derezzed-base-infrastructure.derezzedSQSArn}
 ```
 
 `services:` - You organize your servless projects into seperate *services*. Each of these `services:` will create a seperate **CloudFormation** stack in AWS.
