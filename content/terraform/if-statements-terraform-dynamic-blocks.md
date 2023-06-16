@@ -1,10 +1,10 @@
 Title: If Statements Inside Terraform Dynamic Blocks 
 Date: 2023-01-24
-Modified: 2023-01-24
-Tags: local, terraform, terragrunt, aws, amazon, dynamic, modules, django, python, cloud, eventbridge, sns, s3, sqs, if, if-statements, logic, if-logic, conditional, aws_lb_listener, resource
+Modified: 2023-06-16
+Tags: terraform, terragrunt, aws, amazon, dynamic, modules, django, python, cloud, if, if-statements, logic, if-logic, conditional, aws_lb_listener, resource
 Slug: if-statements-terraform-dynamic-blocks
 Author: Miguel Lopez
-Summary: Learn how to use if-statements inside Terraform Dynamic blocks.
+Summary: A guide to help you build if-statements inside Terraform dynamic blocks. By the end of this guide, you will understand how to create two **default_action** blocks for the **aws_lb_listener** resource (and only use one of them).
 
 Technical Stack: AWS, Terraform
 
@@ -12,9 +12,19 @@ Read: 5 minutes
 
 ## Introduction
 
-The `default_action` for the Terraform `aws_lb_listener` resource is known as a Terraform configuration block. Configuration blocks can be wrapped in a `dynamic` block to conditionally include different configurations blocks for a resource.
+[Dynamic Blocks](https://www.terraform.io/docs/language/expressions/dynamic-blocks.html) are used to create if statements inside Terraform resources. Dynamic blocks can be used with any **literal** block inside a Terraform resource.
 
-[More Info on Dynamic Blocks](https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks).
+For example, the `default_action` block inside the `aws_lb_listener` resource is a literal block.
+
+```
+resource "aws_lb_listener" "listener" {
+  load_balancer_arn = aws_lb.application.arn
+
+  dynamic "default_action" {
+    # but the "default_action" block is always a literal block
+  }
+}
+```
 
 After reading this, you will understand: 
 
@@ -24,7 +34,7 @@ After reading this, you will understand:
 
 ## If Statements Inside Dynamic Blocks
 
-Creating an if-statement inside a `dynamic` block is pretty simple.
+You'll use a Terraform [dynamic block](https://www.terraform.io/docs/language/expressions/dynamic-blocks.html) to create the if-statement.
 
 The basic setup looks like this:
 ```
@@ -33,22 +43,21 @@ dynamic "default_action" {
     ...
 }
 ```
- You'll use the `for_each` loop to create the `dynamic "default_action" {}` when the `var.default_action_type == "authenticate-oidc"`.
  
- This example returns `[1]` when the conditional if-statement is **true**.
+In this example, we use the `for_each` combined with a [ternary operator](https://www.terraform.io/docs/language/expressions/conditionals.html#ternary-operator) to create the if-statement. If this logic statement is **true**, then [1] will be passed back and the block will be created.
  
- The `[1]` passed back to the `for_each` means the `dynamic "default_action"` will be created.
+Setting `var.default_action_type` to `null` or `forward` will not create the block.
 
-## Real Terraform Examples
+## Using If Statements for aws_lb_listener
 
-Here's how to use these if-statements in Terraform:
+In this example, we will use the `dynamic` block to create an optional `default_action` block for the `aws_lb_listener` resource.
 
-- Notice the **two** conditionals if-statements for the two different `dynamic "default_action" {}` blocks in the `aws_lb_listener` resource. 
-- The `default_action` is selected by a matching the `var.default_action_type` to `dynamic` block.
+1. Start by looking at the example below
+2. Notice the `dynamic "default_action" {}` blocks in the **aws_lb_listener** resource. These **two** dynamic blocks are used as "if" statements.
+3. Set the `var.default_action_type` to select which "default_action" block to create.
+   - `var.default_action_type == "forward"` will create the **forward** block.
+   - `var.default_action_type == "authenticate-oidc"` will create the **authenticate-oidc** block. 
 
-Use `var.target_group_arn` for `var.default_action_type == "forward"` to include the target group.
-
-Use `var.authenticate_oidc` for `var.default_action_type == "authenticate-oidc"` to include oidc configuration.
 
 **resources.tf**
 ```terraform
@@ -118,10 +127,9 @@ variable "target_group_arn" {
 
 ## Conclusion
 
+Think about using this strategy to create optional blocks when configuring you create a Terraform module that can be used in multiple places.
+
+This load balancer module has been perfect for creating ALBs that are used by multiple types applications. Some of our applications are simple and only needed the `forward` action. While other applications were private needed the `authenticate-oidc` action.
+
 All done for now. Hopefully that helps!
 
------------
-
-**Terraform** is an Infrastructure-as-Code tool that enables to you safely manage and deploy infastructure on multiple cloud providers. 
-
-[Read More About Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
