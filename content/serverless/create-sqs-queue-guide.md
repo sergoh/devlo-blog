@@ -102,3 +102,10 @@ functions:
 ```
 
 For a full list of SQS attributes you can use in your serverless.yml, [read the Serverless Framework SQS Docs](https://www.serverless.com/framework/docs/providers/aws/events/sqs/).
+
+## Other Serverless Framework Examples
+
+Check out the other Serverless Framework example projects I've created:
+
+- [Serverless Framework: Creating an RDS Serverless Database Example](https://www.devlo.io/sls-framework-guide-creating-serverless-rds-cluster.html)
+- [Serverless Framework: Serverless Compose Example Project](https://www.devlo.io/sls-framework-serverless-compose-example-project.html)

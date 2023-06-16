@@ -183,3 +183,10 @@ If you can't connect, check the following:
 
 - Do you have the correct security group attached to the RDS Cluster? 
 - Are you invoking the CLI command from a machine that has access to the security group?
+
+## Other Serverless Framework Examples
+
+Check out the other Serverless Framework example projects I've created:
+
+- [Serverless Framework: Creating an SQS Queue Example](https://www.devlo.io/sls-framework-guide-creating-sqs-queue.html)
+- [Serverless Framework: Serverless Compose Example Project](https://www.devlo.io/sls-framework-serverless-compose-example-project.html)
