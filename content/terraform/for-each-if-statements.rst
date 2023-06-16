@@ -1,4 +1,5 @@
-:title: Terraform for_each loops w/ if statements in Terraform 0.12.6+
+Terraform for_each loops w/ if statements in Terraform 0.12.6+
+###############################################################
 :date: 2021-12-01
 :modified: 2021-12-01
 :tags: terraform, terraform, logic, aws, if, loop, for-each, for-loop, loops
@@ -13,7 +14,7 @@ Technical Stack: Terraform 0.12.6+
 Read: 5 minutes
 
 Prerequisites
-=============
+-------------
 
 - Terraform
 
@@ -22,14 +23,14 @@ These days, I recommend installing terraform with :code:`tfenv` and managing eve
 For mac users: :code:`brew install tfenv && tfenv install latest`
 
 Introduction
-============
+------------
 
 This tutorial will help you build Terraform resources in a :code:`for_each` loop with an :code:`if` statement conditional.
 That :code:`if` conditional will determine if :code:`resource` is built or not.
 
 
 Building the For-Each Loop
-==========================
+--------------------------
 
 Starting in :code:`Terraform 0.12.6+` the :code:`for_each` loop was supported for all :code:`resource` and :code:`module` blocks in Terraform.
 
