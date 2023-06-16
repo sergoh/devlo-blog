@@ -4,7 +4,7 @@ Modified: 2023-06-14
 Tags: serverless, lambda, aws, cloud, developer, django, python, serverless-framework, guide
 Slug: sls-framework-serverless-compose-example-project
 Author: Miguel Lopez
-Summary: A guide to help you deploy mutiple Serverless projects using Serverless Compose. By the end of this guide, you will have an example of how to organize and deploy multiple Serverless projects using Serverless Compose. 
+Summary: A guide to help you deploy mutiple Serverless projects at once using Serverless Compose. By the end of this guide, you will have an example of how to organize and deploy multiple Serverless projects using Serverless Compose.
 
 Technical Stack: AWS, Lambda, Serverless Framework
 
