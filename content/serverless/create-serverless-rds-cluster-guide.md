@@ -23,6 +23,7 @@ To deploy the following Serverless Framework template, you will need the followi
 ## Creating a Serverless RDS Cluster
 
 Using Serverless Framwework, the following `serverless.yml` example creates these resources in AWS:
+
 - [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)
 - [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html)
 - [AWS::SSM::Parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html)
