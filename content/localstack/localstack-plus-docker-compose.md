@@ -14,8 +14,10 @@ Read: 5 minutes
 
 - Docker, Docker-Compose
 - Localstack Docker Image 
-  - _This guide has been updated for Localstack releases after March 29, 2023. [Read More Here.](https://discuss.localstack.cloud/t/new-lambda-implementation-in-localstack-2-0/258)_
-  - _Earlier versions of Localstack Lambda reference `/docker-entrypoint-initaws.d/` for entrypoint scripts. That entrypoint path was deprecated in [v1.1.0](https://github.com/localstack/localstack/releases/tag/v1.1.0)._
+
+_This guide has been updated for Localstack releases after March 29, 2023. [Read More Here.](https://discuss.localstack.cloud/t/new-lambda-implementation-in-localstack-2-0/258)_
+
+_Earlier versions of Localstack Lambda reference `/docker-entrypoint-initaws.d/` for entrypoint scripts. That entrypoint path was deprecated in [v1.1.0](https://github.com/localstack/localstack/releases/tag/v1.1.0)._
 
 ## Introduction
 
@@ -27,7 +29,7 @@ After reading this, you will understand how to:
 
 - Run Localstack in Docker-Compose
 - Create mocked resources in Localstack with entrypoint scripts
-- How to access Localstack services at `http://localstack:4566` or using `aws-local`
+- How to access Localstack services at `http://localstack:4566` or using `awslocal`
 - Override Boto3 Client for Localstack
 
 
@@ -74,15 +76,15 @@ services:
             - "80:80"
         command: uwsgi --http 0.0.0.0:9090 --wsgi-file messages/wsgi/dev.py --callable application --uid appuser --gid appuser --enable-threads
 ```
-1. Copy and paste the following code into `docker-compose.yml`.
+- Copy and paste the following code into `docker-compose.yml`.
 
-2. Build the images: 
+- Build the images: 
 
     ```
     docker-compose -f docker-compose.yml build --pull
     ```
 
-3. Run the containers: 
+- Run the containers: 
 
     ```
     docker-compose -f docker-compose.yml up
