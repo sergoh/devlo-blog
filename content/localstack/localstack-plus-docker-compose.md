@@ -1,6 +1,6 @@
 Title: Run Localstack with Docker-Compose
 Date: 2023-01-16
-Modified: 2023-01-16
+Modified: 2023-06-21
 Tags: docker, docker-compose, localstack, serverless, lambda, aws, python, cloud, eventbridge ,sns, s3, sqs, api, gateway, local, developer, django, python
 Slug: run-localstack-with-docker-compose
 Author: Miguel Lopez
@@ -13,7 +13,9 @@ Read: 5 minutes
 ## Prerequisites 
 
 - Docker, Docker-Compose
-- Localstack Docker Image
+- Localstack Docker Image 
+  - _This guide has been updated for Localstack releases after March 29, 2023. [Read More Here.](https://discuss.localstack.cloud/t/new-lambda-implementation-in-localstack-2-0/258)_
+  - _Earlier versions of Localstack Lambda reference `/docker-entrypoint-initaws.d/` for entrypoint scripts. That entrypoint path was deprecated in [v1.1.0](https://github.com/localstack/localstack/releases/tag/v1.1.0)._
 
 ## Introduction
 
@@ -21,11 +23,12 @@ Looking to run AWS services locally and improve the development experience? Are 
 
 **Localstack** is a cloud service emulator that runs in a single container on your laptop or in your CI environment. [Read More Here.](https://docs.localstack.cloud/getting-started/?__hstc=108988063.4c3716ab9432d996297196d8a59201a6.1673401275754.1673401275754.1673907003067.2&__hssc=108988063.1.1673907003067&__hsfp=1395183370)
 
-After reading this, your application will: 
+After reading this, you will understand how to: 
 
-- Run Localstack in docker-compose
-- Local AWS services can be mocked at `http://localstack:4566`
-- Boto3 Client is overridden to point to Localstack in docker-compose
+- Run Localstack in Docker-Compose
+- Create mocked resources in Localstack with entrypoint scripts
+- How to access Localstack services at `http://localstack:4566` or using `aws-local`
+- Override Boto3 Client for Localstack
 
 
 ## Localstack on Docker Compose
@@ -41,21 +44,17 @@ services:
     localstack:
         image: localstack/localstack
         ports:
-            - 4566:4566            # LocalStack Edge Proxy
+            - "127.0.0.1:4566:4566"            # LocalStack Gateway
+            - "127.0.0.1:4510-4559:4510-4559"  # external services port range
         environment:
             AWS_DEFAULT_REGION: us-west-2
             AWS_ACCESS_KEY_ID: test
             AWS_SECRET_ACCESS_KEY: test
             DEBUG: ${DEBUG:-1}
-            DEFAULT_REGION: us-west-2
             DOCKER_HOST: unix:///var/run/docker.sock
-            DATA_DIR: ${DATA_DIR-}
-            LAMBDA_EXECUTOR: ${LAMBDA_EXECUTOR:-local}
             LS_LOG: WARN
-            HOST_TMP_FOLDER: ${TMPDIR:-/tmp/}localstack
             HOSTNAME: localstack
             HOSTNAME_EXTERNAL: localstack
-            USE_SINGLE_REGION: 1
         volumes:
             - "${TMPDIR:-/tmp}/localstack:/var/lib/localstack"
             - "/var/run/docker.sock:/var/run/docker.sock"
