@@ -14,8 +14,10 @@ Read: 5 minutes
 
 - Docker, Docker-Compose
 - Localstack Docker Image 
-  - _This guide has been updated for Localstack releases after March 29, 2023. [Read More Here.](https://discuss.localstack.cloud/t/new-lambda-implementation-in-localstack-2-0/258)_
-  - _Earlier versions of Localstack Lambda reference `/docker-entrypoint-initaws.d/` for entrypoint scripts. That entrypoint path was deprecated in [v1.1.0](https://github.com/localstack/localstack/releases/tag/v1.1.0)._
+
+_This guide has been updated for Localstack releases after March 29, 2023. [Read More Here.](https://discuss.localstack.cloud/t/new-lambda-implementation-in-localstack-2-0/258)_
+
+_Earlier versions of Localstack Lambda reference `/docker-entrypoint-initaws.d/` for entrypoint scripts. That entrypoint path was deprecated in [v1.1.0](https://github.com/localstack/localstack/releases/tag/v1.1.0)._
 
 ---
 
@@ -29,30 +31,30 @@ After reading this, your docker-compose will:
 
 - Run Localstack in Docker-Compose
 - Create mocked resources in Localstack with entrypoint scripts
-- How to access Localstack services at `http://localstack:4566` or using `aws-local`
+- How to access Localstack services at `http://localstack:4566` or using `awslocal`
 
 ---
 
 ## Entrypoint Script to Create S3 Buckets in Localstack
 
-1.  Create and paste the following content to `start-localstack.sh`. This will be our entrypoint scipt: 
+-  Create and paste the following content to `start-localstack.sh`. This will be our entrypoint scipt: 
 ```yml
 #!/bin/bash
 awslocal s3 mb s3://hsl-local-terraform --region us-west-2
 awslocal s3 mb s3://hsl-local-serverless --region us-west-2
 awslocal s3 ls --region us-west-2
 ```
-2. Make the script executable by running:
+- Make the script executable by running:
 ```
 chmod +x start-localstack.sh
 ```
 
-3. Pass the `start-localstack.sh` through the `volumes:` section to the  `localstack` container:
-    - Pass entrypoint startup scripts through `/etc/localstack/init/ready.d/`
-    - Read here for a full list of [Localstack Lifecycle Events](https://docs.localstack.cloud/references/init-hooks/)
-    - Use the `docker-compose.yml` below as a reference.
+- Pass the `start-localstack.sh` through the `volumes:` section to the  `localstack` container:
+    1. Pass entrypoint startup scripts through `/etc/localstack/init/ready.d/`
+    2. Read here for a full list of [Localstack Lifecycle Events](https://docs.localstack.cloud/references/init-hooks/)
+    3. Use the `docker-compose.yml` below as a reference.
 
-4. Start the containers using `docker-compose up` and observe the S3 buckets being made:
+- Start the containers using `docker-compose up` and observe the S3 buckets being made:
 ```
 relate-lambda-template-localstack-1  | make_bucket: hsl-local-serverless
 relate-lambda-template-localstack-1  | {
@@ -102,12 +104,12 @@ $ awslocal s3 ls
 
 ### Access from Localstack Container
 
-1. Access the `localstack` container by running:
+-  Access the `localstack` container by running:
 ```
 $ docker-compose exec localstack /bin/bash
 ```
 
-2. Use **awslocal** to access the S3 buckets:
+-  Use **awslocal** to access the S3 buckets:
 ```
 $ awslocal s3 ls
 
